@@ -1,0 +1,39 @@
+h1 {
+	font-family: 'Salsa';
+	font-size: 38px;
+}
+
+nav {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 50;
+}
+
+nav ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 20;
+}
+
+nav ul li {
+    float: left;
+    margin: 0 8px;
+    display: block;
+    padding: 4px 8px 2px;
+    font-family: FjallaOneRegular, Arial, sans-serif;
+    background: #67c7c0;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 140%;
+    cursor: pointer;
+    outline: 0;
+}
+
+nav ul li:hover {
+    color: #67c7c0;
+    background: #fff;
+}
