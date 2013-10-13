@@ -1,11 +1,12 @@
 h1 {
-	font-family: 'Salsa';
+	font-family: Salsa;
 	font-size: 38px;
 }
 
 nav {
+    font-family: Salsa;
     position: fixed;
-    bottom: 20px;
+    Top: 0px;
     left: 20px;
     z-index: 50;
 }
@@ -20,20 +21,34 @@ nav ul {
 
 nav ul li {
     float: left;
-    margin: 0 8px;
-    display: block;
-    padding: 4px 8px 2px;
-    font-family: FjallaOneRegular, Arial, sans-serif;
-    background: #67c7c0;
-    color: #fff;
+    height:53px;
+    line-height: 80px;
+    width: 90px;
+    text-align: center;
     text-transform: uppercase;
-    text-decoration: none;
+    display: block;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+    margin-bottom: 20px;
+    background: rgb(0, 128, 128);
+    background: rgba(0, 128, 128, 0.5);
+    margin: 0 8px;
     font-size: 140%;
+    color: white;
     cursor: pointer;
     outline: 0;
 }
 
 nav ul li:hover {
-    color: #67c7c0;
-    background: #fff;
+    background: #434343;
+    background: rgba(67, 67, 67, 0.5);
+    -webkit-transition: background-color 0.2s linear;
+    -moz-transition: background-color 0.2s linear;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
 }
