@@ -34,10 +34,10 @@ app.get('/images', function(req, res) {
         if (err) {
             throw err;
         }
-        files.map(function (file) {
+        files.map(function(file) {
             console.log(path.join(p, file));
             return path.join(p, file);
-        }).filter(function (file) {
+        }).filter(function(file) {
             return fs.statSync(file).isFile();
         });
         res.writeHead(200, { 'Content-Type': 'application/json' });
@@ -45,7 +45,8 @@ app.get('/images', function(req, res) {
         res.end();
     });
 
-})
+});
+app.get('/map', routes.map);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

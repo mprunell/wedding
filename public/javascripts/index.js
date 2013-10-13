@@ -3,10 +3,11 @@
  */
 $(document).ready(function() {
     loadImages();
+    mapButton();
 })
 
 function loadImages() {
-    $.getJSON( "/images", function(images) {
+    $.getJSON( '/images', function(images) {
         startSlideShow(images);
     });
 }
@@ -20,5 +21,12 @@ function startSlideShow(images) {
         backgrounds: backgrounds
     })('overlay', {
         src:'/javascripts/vegas/overlays/03.png'
+    });
+}
+
+function mapButton() {
+    $('li.map').click(function(e) {
+        e.preventDefault();
+        document.location.href = 'map';
     });
 }

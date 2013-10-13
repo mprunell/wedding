@@ -1,11 +1,15 @@
 extends layout
 
+block stylesheets
+    link(rel='stylesheet', href='javascripts/vegas/jquery.vegas.css')
+
 block content
     nav
         ul
-            li(class='home', tabindex=0)
-                a(href='#') Inicio
-            li(class='rsvp', tabindex=0)
-                a(href='#') RSVP
-            li(class='map', tabindex=0)
-                a(href='#') Mapa
+            li(class='home', tabindex=0) Inicio
+            li(class='rsvp', tabindex=0) RSVP
+            li(class='map', tabindex=0) Mapa
+    script(type='text/javascript', src='javascripts/jquery.min.js')
+    script(type='text/javascript', src='javascripts/vegas/jquery.vegas.js')
+    script(type='text/javascript', src='javascripts/index.js')
+
