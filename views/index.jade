@@ -1,15 +1,19 @@
 extends layout
 
 block stylesheets
-    link(rel='stylesheet', href='javascripts/vegas/jquery.vegas.css')
-
+    link(rel='stylesheet', href='/javascripts/vegas/jquery.vegas.css')
+    link(rel='stylesheet', href='/stylesheets/reveal.css')
 block content
+    div(id='map-window', class='reveal-modal', style='top: 100px; opacity: 1; visibility: hidden')
+        a(class='close-reveal-modal') ×
+        div(id='basic-map', style='height:400px')
     nav
         ul
-            li(class='home', tabindex=0) Inicio
-            li(class='rsvp', tabindex=0) RSVP
             li(class='map', tabindex=0) Mapa
-    script(type='text/javascript', src='javascripts/jquery.min.js')
-    script(type='text/javascript', src='javascripts/vegas/jquery.vegas.js')
-    script(type='text/javascript', src='javascripts/index.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(src='/javascripts/vegas/jquery.vegas.min.js')
+    script(src='/javascripts/jquery.reveal.js')
+    script(type='text/javascript', src='javascripts/OpenLayers.js');
+    script(src='/javascripts/osm_marker_popup.js')
+    script(src='/javascripts/index.js')
 
