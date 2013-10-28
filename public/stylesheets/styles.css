@@ -23,7 +23,7 @@ nav ul li {
     float: left;
     height:53px;
     line-height: 80px;
-    width: 90px;
+    width: 98px;
     text-align: center;
     text-transform: uppercase;
     display: block;
@@ -52,4 +52,58 @@ nav ul li a {
     text-decoration: none;
     color: white;
     display: block;
+}
+
+/* modals */
+
+.close-reveal-modal {
+    z-index: 99999;
+}
+
+.info {
+    font-size: 20px;
+}
+
+.invite.wrapper, #basic-map {
+    border: 2px solid gray;
+}
+
+.invite.wrapper {
+    padding: 5%;
+}
+
+.info .name1 {
+    float: left;
+    margin-left: 20%;
+}
+
+.info .name2 {
+    float: right;
+    margin-right: 20%;
+}
+
+.invite {
+    text-align: center;
+}
+
+.middle {
+    float: right;
+    font-size: 13px;
+}
+
+.civil {
+    float: left;
+    text-align: left;
+    font-size: 13px;
+}
+
+.bank {
+    float: right;
+    text-align: right;
+    font-size: 13px
+}
+
+/* */
+div.clear {
+    clear: both;
 }

@@ -4,11 +4,34 @@ block stylesheets
     link(rel='stylesheet', href='/javascripts/vegas/jquery.vegas.css')
     link(rel='stylesheet', href='/stylesheets/reveal.css')
 block content
-    div(id='map-window', class='reveal-modal', style='top: 100px; opacity: 1; visibility: hidden')
+    div(id='info-window', class='reveal-modal xlarge info')
+        a(class='close-reveal-modal') ×
+        div(class='invite wrapper')
+            div(class='name1') ANDRES GARCÍA
+            div(class='name2') LORENA CHOROSZUCHA
+            div(class='clear')
+            p(class='invite text1') Participan a Ud(s) su casamiento e invitan a presenciar la ceremonia
+            p(class='invite text2') religiosa que se realizará el día domingo 24 de noviembre a las 15.30 horas (puntual) en
+            p(class='invite text3') la Parroquia Nuestra Señora de Lourdes (Michigan 1629 esq. Rivera).
+            div(class='clear')
+            div(class='middle')
+                p Montevideo 2013
+            div(class='clear')
+            p(class='invite party') Luego de la ceremonia los esperamos para festejar en el Carrasco Yacht.
+            p(class='invite party address') Avenida Racine 3080 esquina Avenida de las Américas
+            div(class='clear')
+            div(class='civil')
+                p Registro Civil:
+                p Jueves 22 de noviembre 9 hs. Sarandí 428.
+            div(class='bank')
+                p Colectivo Banco Itaú CC $: 689 00 60
+            div(class='clear')
+    div(id='map-window', class='reveal-modal xlarge', style='top: 100px; opacity: 1; visibility: hidden')
         a(class='close-reveal-modal') ×
         div(id='basic-map', style='height:400px')
     nav
         ul
+            li(class='info', tabindex=0) Tarjeta
             li(class='map', tabindex=0) Mapa
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src='/javascripts/vegas/jquery.vegas.min.js')
