@@ -23,7 +23,7 @@ nav ul li {
     float: left;
     height:53px;
     line-height: 80px;
-    width: 98px;
+    width: 130px;
     text-align: center;
     text-transform: uppercase;
     display: block;
@@ -70,6 +70,7 @@ nav ul li a {
 
 .invite.wrapper {
     padding: 5%;
+    font-family: Salsa;
 }
 
 .info .name1 {
