@@ -66,8 +66,7 @@ function initMap() {
     markers.addMarker(new OpenLayers.Marker(lonLat1, icon));
     var popup1 = new OpenLayers.Popup.FramedCloud("Popup",
         lonLat1, null,
-        '<a target="_blank" href="http://openlayers.org/">We</a> ' +
-            'could be here.<br>Or elsewhere.', null,
+        'Michigan 1629', null,
         true // <-- true if we want a close (X) button, false otherwise
     );
 
@@ -82,8 +81,7 @@ function initMap() {
     markers.addMarker(new OpenLayers.Marker(lonLat2, icon));
     var popup2 = new OpenLayers.Popup.FramedCloud("Popup",
         lonLat2, null,
-        '<a target="_blank" href="http://openlayers.org/">We</a> ' +
-            'could be here.<br>Or elsewhere.', null,
+        'Avenida Racine 3080', null,
         true // <-- true if we want a close (X) button, false otherwise
     );
 
