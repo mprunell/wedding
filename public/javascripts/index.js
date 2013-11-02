@@ -66,7 +66,7 @@ function initMap() {
     markers.addMarker(new OpenLayers.Marker(lonLat1, icon));
     var popup1 = new OpenLayers.Popup.FramedCloud("Popup",
         lonLat1, null,
-        'Michigan 1629', null,
+        '<div style="width: 120px;">Michigan 1629</div>', null,
         true // <-- true if we want a close (X) button, false otherwise
     );
 
@@ -81,7 +81,7 @@ function initMap() {
     markers.addMarker(new OpenLayers.Marker(lonLat2, icon));
     var popup2 = new OpenLayers.Popup.FramedCloud("Popup",
         lonLat2, null,
-        'Avenida Racine 3080', null,
+        '<div style="width: 150px;"><span>Avenida Racine 3080</span></div>', null,
         true // <-- true if we want a close (X) button, false otherwise
     );
 
@@ -95,5 +95,6 @@ function initMap() {
     var zoom = 13;
     map.setCenter (position, zoom);
     map.addPopup(popup1);
+    popup1.updateSize(new OpenLayers.Size(300,200));
     map.addPopup(popup2);
 }
