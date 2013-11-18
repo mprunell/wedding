@@ -46,7 +46,22 @@ app.get('/images', function(req, res) {
     });
 
 });
-app.get('/map', routes.map);
+
+function generate_xml_sitemap() {
+    // the root of your website - the protocol and the domain name with a trailing slash
+    var root_path = 'http://www.lorenayandres.com/';
+    // XML sitemap generation starts here
+    var priority = 0.5;
+    var freq = 'monthly';
+    var xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+    xml += '</urlset>';
+    return xml;
+}
+app.get('/sitemap.xml', function(req, res) {
+    var sitemap = generate_xml_sitemap();
+    res.header('Content-Type', 'text/xml');
+    res.send(sitemap);
+})
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
