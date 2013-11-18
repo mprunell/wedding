@@ -27,6 +27,17 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/*', function(req, res, next) {
+    var fakeIPPattern = /^\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}$/;
+    if (req.headers.host.match(fakeIPPattern) !== null) {
+        next();
+    } else if (req.headers.host.match(/^www/) === null ) {
+        res.redirect('http://www.' + req.headers.host + req.url);
+    } else {
+        next();
+    }
+})
+
 app.get('/', routes.index);
 app.get('/images', function(req, res) {
     var p = "./public/images"
@@ -48,12 +59,19 @@ app.get('/images', function(req, res) {
 });
 
 function generate_xml_sitemap() {
-    // the root of your website - the protocol and the domain name with a trailing slash
     var root_path = 'http://www.lorenayandres.com/';
-    // XML sitemap generation starts here
+    urls = [''];
     var priority = 0.5;
     var freq = 'monthly';
     var xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+    for (var i in urls) {
+        xml += '<url>';
+        xml += '<loc>'+ root_path + urls[i] + '</loc>';
+        xml += '<changefreq>'+ freq +'</changefreq>';
+        xml += '<priority>'+ priority +'</priority>';
+        xml += '</url>';
+        i++;
+    }
     xml += '</urlset>';
     return xml;
 }
