@@ -31,10 +31,11 @@ block content
     div(id='map-window', class='reveal-modal xlarge', style='top: 100px; opacity: 1; visibility: hidden')
         a(class='close-reveal-modal') ×
         div(id='basic-map', style='height:400px')
-    nav
+    nav(class='left')
         ul
             li(class='info', tabindex=0) Invitación
             li(class='map', tabindex=0) Mapa
+    audio(id="song", src="/sounds/music.mp3", controls preload="auto", autobuffer)
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
     script(src='/javascripts/vegas/jquery.vegas.min.js')
     script(src='/javascripts/jquery.reveal.js')

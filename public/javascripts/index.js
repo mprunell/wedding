@@ -6,6 +6,7 @@ $(document).ready(function() {
     initMap();
     infoButton();
     mapButton();
+    playSound();
 });
 
 function loadImages() {
@@ -97,4 +98,9 @@ function initMap() {
     map.addPopup(popup1);
     popup1.updateSize(new OpenLayers.Size(300,200));
     map.addPopup(popup2);
+}
+
+function playSound() {
+    var thissound=document.getElementById("song");
+    thissound.play();
 }

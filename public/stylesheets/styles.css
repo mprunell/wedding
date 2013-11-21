@@ -3,12 +3,27 @@ h1 {
 	font-size: 38px;
 }
 
+#song {
+    visibility: hidden;
+}
+
 nav {
     font-family: Salsa;
     position: fixed;
     Top: 0px;
     left: 50px;
     z-index: 50;
+}
+
+nav.right {
+    right: 50px;
+    left: auto;
+}
+
+nav.right li {
+    margin-top: 10px;
+    height: 40px;
+    width: 30px;
 }
 
 nav ul {
